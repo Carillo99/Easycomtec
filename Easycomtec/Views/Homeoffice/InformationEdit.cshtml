@@ -1,0 +1,67 @@
+﻿@model  Easycomtec.Models.CandidatesModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h3>Banco de Talentos - Easy Communication & Technology <span>(Developers/ Desenvolvedores)</span></h3>
+<hr />
+<p>
+    You can choose to receive your payment through Paypal, PagSeguro or conventional
+    bank accounts / Você pode optar em receber seu pagamento pelo Paypal, PagSeguro
+    ou contas bancarias convencionais.
+</p>
+
+<br />
+
+<h4>Bank Information/ Informação bancária</h4>
+
+<hr />
+
+
+@Html.HiddenFor(model => model.InformationBank.InformationBankID)
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.Cpf, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.Cpf, new { htmlAttributes = new { @class = "form-control", mask = "999.999.999-99"} })
+    </div>
+</div>
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.BanK, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.BanK, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Bank"} })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.Agency, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.Agency, new { htmlAttributes = new { @class = "form-control", placeholder = "Your agency"} })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.AccountType, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        <div class="custom-control custom-radio custom-control-inline">
+            @Html.RadioButtonFor(model => model.InformationBank.AccountType, "Chain", new { htmlAttributes = new { @class = "custom-control-input"} })
+            <label class="custom-control-label" for="AccountType">Chain / Corrente</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            @Html.RadioButtonFor(model => model.InformationBank.AccountType, "Savings", new { htmlAttributes = new { @class = "custom-control-input",} })
+            <label class="custom-control-label" for="AccountType">Savings / Poupança</label>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.AccountNumber, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.AccountNumber, new { htmlAttributes = new { @class = "form-control"} })
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

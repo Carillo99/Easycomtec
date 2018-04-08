@@ -1,0 +1,17 @@
+﻿@using Easycomtec.Models
+
+@{
+    ViewBag.Title = "Index";
+    var func = TempData["Candidates"] as Candidates;
+}
+
+<div class="form-horizontal pad">
+    <div class="margin cor">
+        <h3 class="text-center">Banco de Talentos - Easy Communication & Technology <span>(Developers/ Desenvolvedores)</span></h3>
+        <br />
+        <h5 class="text-center">To edit your application click edit/ Para editar sua candidatura clique em editar</h5>
+        <br />
+        <h5 class="text-center">@Html.ActionLink("Edit / Editar", "DeveloperEdit", "Homeoffice", new { id = func.CandidateID }, new { @class = "btn btn-default block" })</h5>
+    </div>
+</div>
+

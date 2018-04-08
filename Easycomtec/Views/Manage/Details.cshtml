@@ -1,0 +1,258 @@
+﻿@model  Easycomtec.Models.CandidatesModel
+
+@{
+    ViewBag.Title = "Details";
+
+}
+<!-- Modal -->
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">@Html.DisplayFor(model => model.OccupationArea.Name)</h4>
+        </div>
+        <div class="modal-body cor-secundary">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Contato</h3>
+                                </div>
+                                <div class="panel-body">
+                                    Email: @Html.DisplayFor(model => model.Candidates.Email)<br/>
+                                    Skype: @Html.DisplayFor(model => model.OccupationArea.Skype)
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Personal information</h3>
+                                </div>
+                                <div class="panel-body">
+                                   @Html.DisplayFor(model => model.OccupationArea.Cyte)<br/>
+                                   @Html.DisplayFor(model => model.OccupationArea.State)
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Jobs</h3>
+                                </div>
+                                <div class="panel-body">
+                                    @Html.DisplayFor(model => model.OccupationArea.Linkedin)<br />
+                                    @Html.DisplayFor(model => model.OccupationArea.Portfolio)
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Personal information:</h3>
+                                </div>
+                                <div class="panel-body">
+                                    @Html.DisplayFor(model => model.OccupationArea.Willingness)<br />
+                                    @Html.DisplayFor(model => model.OccupationArea.Horary)
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Salary R$/Hoarary</h3>
+                            </div>
+                            <div class="panel-body">
+                                @Html.DisplayFor(model => model.OccupationArea.Salary)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">information Bank</h3>
+                                </div>
+                                <div class="panel-body">
+                                    Name: @Html.DisplayFor(model => model.OccupationArea.Name)<br />
+                                    CPF: @Html.DisplayFor(model => model.InformationBank.Cpf)<br />
+                                    Bank: @Html.DisplayFor(model => model.InformationBank.BanK)<br />
+                                    Account Type: @Html.DisplayFor(model => model.InformationBank.AccountType)<br />
+                                    Agency: @Html.DisplayFor(model => model.InformationBank.Agency)<br />
+                                    Account Number: @Html.DisplayFor(model => model.InformationBank.AccountNumber)
+                                </div>
+                            </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <canvas class="panel-body mobi  cor"></canvas>
+                        </div>
+                        <div class="col-sm-6">
+                            <canvas class="panel-body designer  cor"></canvas>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <canvas class="panel-body frontAnd  cor"></canvas>
+                        </div>
+                        <div class="col-sm-6">                                
+                            <canvas class="panel-body backAnd cor"></canvas>                                
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <canvas class="panel-body several cor"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="modal-footer">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" value="Delete" class="btn btn-primary" />
+                </div>
+            }
+            
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        var mobi = $(".mobi");
+
+        var mobiChart = new Chart(mobi, {
+            type: 'doughnut',
+            data: {
+            labels: ["Ionic", "Android", "Ios"],
+                datasets: [
+                    {
+            label: "Population (millions)",
+            backgroundColor: ["#01579b", "#0277bd", "#424242"],
+                        data: [@Model.Knowledge.Ionic, @Model.Knowledge.Android, @Model.Knowledge.Ios],
+                    }
+                ]
+            },
+            options: {
+            title: {
+            display: true,
+                    text: 'Desenvolvedor Mobi'
+                }
+            }
+
+        });
+
+        var designer = $(".designer");
+
+        var designerChart = new Chart(designer, {
+            type: 'doughnut',
+            data: {
+            labels: ["Magento", "Wordpress", "HTML5", "Bootstrap", "CSS3"],
+                datasets: [
+                    {
+            label: "Population (millions)",
+            backgroundColor: ["#01579b", "#0277bd", "#424242", "#039be5", "#03a9f4"],
+                        data: [@Model.Knowledge.Majento, @Model.Knowledge.WordPress, @Model.Knowledge.Html, @Model.Knowledge.Bootstrap, @Model.Knowledge.Css]
+                    }
+                ]
+            },
+            options: {
+            title: {
+            display: true,
+                    text: 'Web Designer'
+                }
+            }
+        });
+
+        var frontAnd = $(".frontAnd");
+
+        var frontAndChart = new Chart(frontAnd, {
+            type: 'doughnut',
+            data: {
+                labels: ["Django","Jquery", "Angular", "Vue"],
+                datasets: [
+                    {
+            label: "Population (millions)",
+            backgroundColor: ["#01579b", "#0277bd", "#424242"],
+                        data: [@Model.Knowledge.Django,@Model.Knowledge.Jquery, @Model.Knowledge.Angular, @Model.Knowledge.Vue]
+                    }
+                ]
+            },
+            options: {
+            title: {
+            display: true,
+                    text: 'Front And'
+                }
+            }
+
+        });
+
+        var backAnd = $(".backAnd");
+
+        var backAndChart = new Chart(backAnd, {
+            type: 'doughnut',
+            data: {
+            labels: ["SQL Server", "MySQL", "Java", "Python", "Cake", "PHP", "Asp .Net MVC", "Ruby on Rails"],
+                datasets: [
+                    {
+            label: "Population (millions)",
+            backgroundColor: ["#01579b", "#0277bd", "#424242", "#039be5", "#03a9f4", "#29b6f6", "#4fc3f7", "#212121"],
+                        data: [@Model.Knowledge.SqlServer, @Model.Knowledge.MySql, @Model.Knowledge.Java, @Model.Knowledge.Phyton, @Model.Knowledge.Cake, @Model.Knowledge.Php, @Model.Knowledge.AspNetMvc, @Model.Knowledge.Ruby]
+                    }
+                ]
+            },
+            options: {
+            title: {
+            display: true,
+                    text: 'Back And'
+                }
+            }
+
+        });
+
+        var several = $(".several");
+
+        var severalbar = new Chart(several, {
+            type: 'bar',
+            data: {
+                labels: ["C", "C++", "Photoshop", "Illustraitor", "Salesforce", "Seo"],
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: ["#01579b", "#0277bd", "#424242", "#039be5", "#03a9f4", "#29b6f6"],
+                        data: [@Model.Knowledge.C, @Model.Knowledge.C_, @Model.Knowledge.Photoshop, @Model.Knowledge.Illustraitor, @Model.Knowledge.Salesforce,@Model.Knowledge.Seo]
+                    }
+                ]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'Several'
+                }
+            }
+        });
+
+
+</script>
+
+}

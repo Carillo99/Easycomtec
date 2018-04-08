@@ -1,0 +1,79 @@
+﻿@model  Easycomtec.Models.CandidatesModel
+
+@{
+    ViewBag.Title = "Bank Information/ Informação bancária";
+}
+
+<h3>Banco de Talentos - Easy Communication & Technology <span>(Developers/ Desenvolvedores)</span></h3>
+<hr />
+<p>
+    You can choose to receive your payment through Paypal, PagSeguro or conventional
+    bank accounts / Você pode optar em receber seu pagamento pelo Paypal, PagSeguro
+    ou contas bancarias convencionais.
+</p>
+
+<br/>
+
+<h4>Bank Information/ Informação bancária</h4>
+
+<hr />
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.Cpf, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.Cpf, new { htmlAttributes = new { @class = "form-control", placeholder = "Your CPF", ng_model = "InformationBanks.Cpf", mask = "999.999.999-99", ng_pattern = "/^([0-9]{3}).?([0-9]{3}).?([0-9]{3})-?([0-9]{2})$/" } })        
+    </div>
+    <div ng-show="LicenseForm2.$submitted || LicenseForm2['InformationBank.Cpf'].$touched">
+        <span class="text-danger" ng-show="LicenseForm2['InformationBank.Cpf'].$error.pattern">Tell us your CPF.</span>
+    </div>
+</div>
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.BanK, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.BanK, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Bank", ng_model = "InformationBank.BanK", ng_required = "true" }})
+    </div>
+    <div ng-show="LicenseForm2.$submitted || LicenseForm2['InformationBank.BanK'].$touched">
+        <span class="text-danger" ng-show="LicenseForm2['InformationBank.BanK'].$error.required">Tell us which bank you use.</span>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.Agency, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.Agency, new { htmlAttributes = new { @class = "form-control", placeholder = "Your agency", ng_model = "InformationBank.Agency", ng_required = "true" }})
+    </div>
+    <div ng-show="LicenseForm2.$submitted || LicenseForm2['InformationBank.Agency'].$touched">
+        <span class="text-danger" ng-show="LicenseForm2['InformationBank.Agency'].$error.required">Tell us the agency number.</span>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.AccountType, htmlAttributes: new { @class = "col-form-label"})
+    <div class="">
+        <div class="custom-control custom-radio custom-control-inline">
+            @Html.RadioButtonFor(model => model.InformationBank.AccountType, "Chain", new { htmlAttributes = new { @class = "custom-control-input", ng_required = "true" } })
+            <label class="custom-control-label" for="AccountType">Chain / Corrente</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            @Html.RadioButtonFor(model => model.InformationBank.AccountType, "Savings", new { htmlAttributes = new { @class = "custom-control-input", ng_required = "true" } })
+            <label class="custom-control-label" for="AccountType">Savings / Poupança</label>
+        </div>
+        <div ng-show="LicenseForm2.$submitted || LicenseForm2['InformationBank.AccountType'].$touched">
+            <span class="text-danger" ng-show="LicenseForm2['InformationBank.AccountType'].$error.required">Tell us the Account type.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.InformationBank.AccountNumber, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.InformationBank.AccountNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "Your AccountNumber", ng_model = "InformationBank.AccountNumber", ng_required = "true" } })
+    </div>
+    <div ng-show="LicenseForm2.$submitted || LicenseForm2['InformationBank.AccountNumber'].$touched">
+        <span class="text-danger" ng-show="LicenseForm2['InformationBank.AccountNumber'].$error.required">Tell us the Account number.</span>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/AngularJs")
+}

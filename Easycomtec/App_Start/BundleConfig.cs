@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace Easycomtec
 {
@@ -10,6 +9,23 @@ namespace Easycomtec
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Angular").Include(
+                       "~/Scripts/angular.js",
+                       "~/Scripts/angular.min.js",
+                       "~/Scripts/ngMask.js"
+                        ));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/chart").Include(
+                        "~/Scripts/Chart.js",
+                        "~/Scripts/Chart.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/chartJS").Include(
+                        "~/Scripts/ChartJS.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/AngularJs").Include(
+                        "~/Scripts/appt.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));

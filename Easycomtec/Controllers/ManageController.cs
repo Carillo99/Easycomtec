@@ -1,20 +1,28 @@
-﻿using System;
+﻿using Easycomtec.Models;
+using Microsoft.AspNet.Identity.Owin;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Easycomtec.Models;
+using PagedList;
+using System.Net;
+using System.Data;
+using System.Data.Entity;
+using System.Collections.Generic;
+using System;
 
 namespace Easycomtec.Controllers
 {
+
+
     [Authorize]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+
+        private CandidatesContext db = new CandidatesContext();
+        private CandidatesModel model = new CandidatesModel();
+
 
         public ManageController()
         {
@@ -32,9 +40,9 @@ namespace Easycomtec.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -50,6 +58,101 @@ namespace Easycomtec.Controllers
             }
         }
 
+
+        public ActionResult Talents(string sortOrder, string currentFilter, string searchString, int? page)
+        {
+            ViewBag.CurrentSort = sortOrder;
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            var occupationArea = db.OccupationArea.Include(o => o.Canditates);
+
+            occupationArea = occupationArea.OrderBy(s => s.Name);
+
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            //return View(db.remedio.OrderBy(s => s.medic_Generico).ToPagedList(pageNumber, pageSize));
+            return View(occupationArea.ToPagedList(pageNumber, pageSize));
+        }
+
+        // GET: Selection/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            List<Knowledge> nn = new List<Knowledge>();
+
+            Candidates candidates = db.Candidates.Find(id);
+            OccupationArea occupationArea = db.OccupationArea.Find(id);
+            InformationBank informationBanks = db.InformationBank.Find(id);
+            Knowledge knowledge = db.Knowledge.Find(id);
+
+            model.Candidates = candidates;
+            model.OccupationArea = occupationArea;
+            model.InformationBank = informationBanks;
+            model.Knowledge = knowledge;
+
+            nn.Add(model.Knowledge);
+            ViewBag.REP = nn.ToList();
+
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
+            return View(model);
+        }
+
+        // POST: Selection/Delete/5
+        [HttpPost, ActionName("Details")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            
+            Candidates candidates = db.Candidates.Find(id);
+            OccupationArea occupationArea = db.OccupationArea.Find(id);
+            InformationBank informationBanks = db.InformationBank.Find(id);
+            Knowledge knowledge = db.Knowledge.Find(id);
+
+            model.Candidates = candidates;
+            model.OccupationArea = occupationArea;
+            model.InformationBank = informationBanks;
+            model.Knowledge = knowledge;
+
+            
+
+            db.Candidates.Remove(model.Candidates);
+            db.OccupationArea.Remove(model.OccupationArea);
+            db.InformationBank.Remove(model.InformationBank);
+            db.Knowledge.Remove(model.Knowledge);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Talents");
+        }
+
+    
+
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        /*
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)
@@ -384,6 +487,8 @@ namespace Easycomtec.Controllers
             Error
         }
 
+    
 #endregion
+*/
     }
 }

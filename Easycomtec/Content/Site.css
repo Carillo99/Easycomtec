@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-color: #edf1f0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +23,73 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.top-form {margin-top: 10%;}
+
+.block {color: white;background-color: #891617;border-color: #b71b1d;}
+
+.block:hover {color: white;background-color: #b71b1d;border-color: #891617;}
+
+.content_ {margin-top: 20%;}
+
+label {display: inline-block;margin-bottom: 10px;font-weight: normal;font-size: 15px;}
+
+.pad {padding-left: 15px;padding-right: 15px;}
+
+.cor {background-color: white;}
+
+.cor-secundary {background-color: #eeeeee;}
+
+hr {border-color: #891617;}
+
+.margin_ {margin: auto;width: 35%;padding: 5%;margin-top: 10%;}
+
+.margin_ h1, h2 {margin-top: 0;margin-bottom: 30px;}
+
+input .ng-invalid {border-color: #b71b1d;}
+
+.margin {margin: auto; width: 55%;padding: 5%;margin-top: 100px;margin-bottom: 50px;}
+
+.topi {text-align: center;margin-top: 25px;margin-bottom: 60px;}
+
+.btn:hover,.btn:focus {color: white;}
+
+.modal-dialog {right: auto;left: 50%;width: 75%;padding-top: 30px;padding-bottom: 30px;margin-top: 60px;}
+
+a img {width: 37px;height: 30px;}
+
+@media only screen and (max-width: 768px) {
+    .margin {width: 70%;}
+
+    .margin_ {margin: auto;width: 50%;margin-top: 20%;}
+
+    .content_ {margin-top: 25%;padding-top: 5px;padding-bottom: 5px;}
+
+}
+
+@media only screen and (max-width: 600px) {
+    .margin {width: 80%;margin-top: 100px;}
+
+    .margin_ {margin: auto;width: 90%;margin-top: 20%;}
+
+    h2, .h2 {font-size: 18px;}
+
+    .navbar-brand {font-size: 15px;}
+}
+
+
+@media only screen and (max-width: 414px) {
+    .margin_ {margin: auto;width: 80%;margin-top: 20%;}
+
+    a img {width: 29px;height: 25px;}
+    
+    .navbar-header a {font-size: 13px;}
+}
+
+@media only screen and (max-width: 320px) {
+    .margin_ {margin: auto;width: 90%;margin-top: 20%;}
+
+    a img {width: 24px;height: 20px;}
+
+    .navbar-header a {font-size: 12px;}
+}    

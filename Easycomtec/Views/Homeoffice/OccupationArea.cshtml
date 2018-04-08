@@ -1,0 +1,162 @@
+﻿
+@model  Easycomtec.Models.CandidatesModel
+@using Easycomtec.Models
+@{
+    ViewBag.Title = "OccupationArea";
+}
+<h3 class="text-center">Banco de Talentos - Easy Communication & Technology <span>(Developers/ Desenvolvedores)</span></h3>
+<hr />
+<p>
+    If you are a developer or DBA, continue filling out this form / Se você atua como desenvolvedor ou DBA, continue o preenchimento
+    deste formulário.
+</p>
+<p>
+    If you act as a designer, fill out the form available at / Se você atua como designer, preencha ao formulário disponível
+    em <a href="https://goo.gl/forms/UJl8Oa91ubN3HRUm1"> https://goo.gl/forms/UJl8Oa91ubN3HRUm1</a>.
+</p>
+<p>
+    If you work in the administrative, customer service or commercial area, fill out the form available at / Se você atua na
+    área administrativa, atendimento ao cliente ou comercial, preencha ao formulário disponível em  <a href="https://goo.gl/forms/0M99jjUwnIAw0flJ2"> https://goo.gl/forms/0M99jjUwnIAw0flJ2</a>.
+</p>
+<br />
+<h4>Occupation area /Área de atuação</h4>
+<hr />
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Name, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.Name, new{htmlAttributes = new{@class = "form-control",placeholder = "Your Name", ng_model = "OccupationArea.Name", ng_pattern = "/^[a-zA-Z]*$/", ng_required = "true"}})
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Name'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Name'].$error.required">Tell us your Nome.</span>
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Name'].$error.pattern">Tell us your Nome.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Skype, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.Skype, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Skype", ng_model = "OccupationArea.Skype", ng_required = "true" } })
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Skype'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Skype'].$error.required">Tell us your Skype.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Linkedin, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.Linkedin, new { htmlAttributes = new { @class = "form-control", type = "url", placeholder = "Your Linkedin", name = "Linkedin", ng_model = "OccupationArea.Linkedin", ng_required = "true" } })
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Linkedin'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Linkedin'].$error.required">Show me your Linkedin.</span>
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Linkedin'].$error.url">Invalid Linkedin.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Cyte, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.Cyte, new { htmlAttributes = new { @class = "form-control", placeholder = "Your Cyte", ng_model = "OccupationArea.Cyte", ng_required = "true" } })
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Cyte'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Cyte'].$error.required">Tell us in what state you Cyte.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.State, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.State, new { htmlAttributes = new { @class = "form-control", placeholder = "Your State", ng_model = "OccupationArea.State", ng_required = "true" } })
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.State'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.State'].$error.required">Tell us in what state you live.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Portfolio, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.Portfolio, new { htmlAttributes = new { @class = "form-control", type = "url", placeholder = "Your Portfólio", ng_model = "OccupationArea.Portfolio", ng_required = "true" } })
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Portfolio'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Portfolio'].$error.required">Show me your portfolio.</span>
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Portfolio'].$error.url">URL invalid.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Willingness, htmlAttributes: new { @class = "col-form-label" })
+    <div class="radio-inline">
+        <div class="custom-control ">
+            @Html.RadioButtonFor(model => model.OccupationArea.Willingness, "Up to 4 hours per day", new { htmlAttributes = new { ng_model = "OccupationArea.Willingness", ng_required = "true" } })
+            <label class="col-md-12" for="Willingness">Up to 4 hours per day / Até 4 horas por dia</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Willingness, "4 to 6 hours per day", new { htmlAttributes = new { ng_model = "OccupationArea.Willingness", ng_required = "true" } })
+            <label class="col-md-12" for="Willingness">4 to 6 hours per day / De 4 á 6 horas por dia</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Willingness, "6 to 8 hours per day", new { htmlAttributes = new { ng_model = "OccupationArea.Willingness", ng_required = "true" } })
+            <label class="col-md-12" for="Willingness">6 to 8 hours per day /De 6 á 8 horas por dia</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Willingness, "Up to 8 hours a day", new { htmlAttributes = new { ng_model = "OccupationArea.Willingness", ng_required = "true" } })
+            <label class="col-md-12" for="Willingness">Up to 8 hours a day (are you sure?) / Acima de 8 horas por dia (tem certeza?)</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Willingness, "Only weekends", new { htmlAttributes = new { ng_model = "OccupationArea.Willingness", ng_required = "true" } })
+            <label class="col-md-12" for="Willingness">Only weekends / Apenas finais de semana</label>
+        </div>
+    </div>
+    <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Willingness'].$touched">
+        <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Willingness'].$error.required">Tell us your Skype.</span>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Horary, htmlAttributes: new { @class = "col-form-label", ng_required = "true" })
+    <div class="radio-inline">
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Horary, "from 08:00 a.m. to 12:00 a.m.", new { htmlAttributes = new { ng_model = "OccupationArea.Horary", ng_required = "true" } })
+            <label class="col-md-12" for="Horary">Morning(from 08:00 to 12:00) / Manhã(de 08:00 ás 12:00)</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Horary, "from 1:00 p.m. to 6:00 p.m.", new { htmlAttributes = new { ng_model = "OccupationArea.Horary", ng_required = "true" } })
+            <label class="col-md-12" for="Horary">Afternoon (from 1:00 p.m. to 6:00 p.m.) / Tarde (de 13:00 ás 18:00)</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Horary, "7:00 p.m. to 10:00 p.m.", new { htmlAttributes = new { ng_model = "OccupationArea.Horary", ng_required = "true" } })
+            <label class="col-md-12" for="Horary">Night (7:00 p.m. to 10:00 p.m.) /Noite (de 19:00 as 22:00)</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Horary, "from 10 p.m. onwards", new { htmlAttributes = new { ng_model = "OccupationArea.Horary", ng_required = "true" } })
+            <label class="col-md-12" for="Horary">Dawn (from 10 p.m. onwards) / Madrugada (de 22:00 em diante)</label>
+        </div>
+        <div class="custom-control">
+            @Html.RadioButtonFor(model => model.OccupationArea.Horary, "from 08:00 a.m. to 18:00 p.m.", new { htmlAttributes = new { ng_model = "OccupationArea.Horary", ng_required = "true" } })
+            <label class="col-md-12" for="Horary">Business (from 08:00 a.m. to 06:00 p.m.) / Comercial (de 08:00 as 18:00)</label>
+        </div>
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Horary'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Horary'].$error.required">Tell us your Skype.</span>
+        </div>
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.OccupationArea.Salary, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.OccupationArea.Salary, new { htmlAttributes = new { @class = "form-control", type = "number", placeholder = "Horas/Reais", ng_pattern = "/^[0-9]{1,2}$/", ng_model = "OccupationArea.Salary", ng_required = "true" } })
+        <div ng-show="LicenseForm1.$submitted || LicenseForm1['OccupationArea.Salary'].$touched">
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Salary'].$error.required">Tell us your salary requirements.</span>
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Salary'].$error.number">requirements number.</span>
+            <span class="text-danger" ng-show="LicenseForm1['OccupationArea.Salary'].$error.pattern">salary max 90.</span>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/AngularJs")
+}

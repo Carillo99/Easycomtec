@@ -1,0 +1,70 @@
+﻿@model  Easycomtec.Models.CandidatesModel
+
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="form-horizontal pad" ng-controller="FormController">
+    @using (Html.BeginForm("DeveloperEdit", "Homeoffice"))
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="margin cor">
+            <div class="Stepone" ng-show="step == 1">
+                <ng-form name="LicenseForm">
+                    @Html.Partial("CandidatesEdit")
+                    <div class="form-group pad">
+                        <div class="">
+                            <input type="button" value="Next" class="btn block" ng-click="nextStep(LicenseForm.$valid)" />
+                        </div>
+                    </div>
+                </ng-form>
+            </div>
+
+            <div class="Steptwo" ng-show="step == 2">
+                <ng-form name="LicenseForm1">
+                    @Html.Partial("OccupationEdit")
+                    <div class="form-group pad">
+                        <div class="">
+                            <input type="button" value="Previous" class="btn block" ng-click="prevStep()" />
+                            <input type="button" value="Next" class="btn block" ng-click="nextStep(LicenseForm1.$valid)" />
+                        </div>
+                    </div>
+                </ng-form>                
+            </div>
+
+            <div class="Stepthree" ng-show="step == 3">
+                <ng-form name="LicenseForm2">
+                    @Html.Partial("InformationEdit")
+                    <div class="form-group pad">
+                        <div class="">
+                            <input type="button" value="Previous" class="btn block" ng-click="prevStep()" />
+                            <input type="button" value="Next" class="btn block" ng-click="nextStep(LicenseForm2.$valid)" />
+                        </div>
+                    </div>
+                </ng-form>                
+            </div>
+
+            <div class="Stepfour" ng-show="step == 4">
+                <ng-form name="LicenseForm3">
+                    @Html.Partial("KnowledgeEdit")
+                    <div class="form-group pad">
+                        <div class="">
+                            <input type="button" value="Previous" class="btn block" ng-click="prevStep()" />
+                            <input type="submit" value="Submit" class="btn block" />
+                        </div>
+                    </div>
+                </ng-form>                
+            </div>
+        </div>
+    }
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

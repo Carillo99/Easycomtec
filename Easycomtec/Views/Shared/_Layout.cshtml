@@ -1,13 +1,19 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    <title itemprop="name">Easy Communication and Technology - Sites, E-commerce, Mobile App, SEO</title>
+    <meta property="og:image" content="https://www.easycomtec.com/Images/novo/paginas/logo-header.png">
+    <meta name="description" content="Easy, Desenvolvimento de Software, Aplicativos Mobile, Criacao de Sites, E-commerce, Vídeos 2D e 3D, Design, Infraestrutura/Cabeamento e Automação Industrial.">
+    <meta property="og:description" content="Easy, Desenvolvimento de Software, Aplicativos Mobile, Criacao de Sites, E-commerce, Vídeos 2D e 3D, Design, Infraestrutura/Cabeamento e Automação Industrial.">
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Angular")
+    @Scripts.Render("~/bundles/chart")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -18,28 +24,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <h2>
+                    <a class="navbar-brand" href='@Url.Action("Developer", "Homeoffice")'>
+                        <img src='@Url.Content("~/Content/img/easy.png")' class="d-inline-block align-top" alt="" />
+                        COMMUNICATION & TECHNOLOGY
+                    </a>
+                </h2>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+    
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
+    <footer>
+        <div class="container body-content">
+            <hr />
+            <p>&copy; @DateTime.Now.Year - Gleisson Carillo</p>
+        </div>
+    </footer>
+
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/AngularJs")
     @RenderSection("scripts", required: false)
 </body>
 </html>

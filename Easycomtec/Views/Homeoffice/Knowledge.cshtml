@@ -1,0 +1,1028 @@
+﻿@model  Easycomtec.Models.CandidatesModel
+
+
+@{
+    ViewBag.Title = "Knowledge/ Conhecimentos";
+}
+
+<h3>Banco de Talentos - Easy Communication & Technology <span>(Developers/ Desenvolvedores)</span></h3>
+<hr />
+<p>
+    Rate yourself from 0 to 5 for the knowledge specified
+    below, and that's okay if you do not know many things,
+    the important thing is to be honest! / Avalie-se de 0
+    a 5 quanto aos conhecimentos especificados abaixo, e
+    tudo bem se não souber de muitas coisas, o importante
+    é que seja sincero!
+</p>
+
+<br />
+<h4>Knowledge/ Conhecimentos</h4>
+<hr />
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Ionic, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Ionic, "0", new { htmlAttributes = new { @class = "custom-control custom-radio" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ionic, "1", new { htmlAttributes = new { @class = "custom-control custom-radio" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ionic, "2", new { htmlAttributes = new { @class = "custom-control custom-radio" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ionic, "3", new { htmlAttributes = new { @class = "custom-control custom-radio" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ionic, "4", new { htmlAttributes = new { @class = "custom-control custom-radio" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Ionic, "5", new { htmlAttributes = new { @class = "custom-control custom-radio" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+
+        @Html.ValidationMessageFor(model => model.Knowledge.Ionic, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Android, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Android, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Android, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Android, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Android, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Android, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Android, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Android, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Ios, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ios, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ios, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ios, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ios, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ios, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ios, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Ios, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Majento, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Majento, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Majento, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Majento, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Majento, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Majento, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Majento, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Majento, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.WordPress, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.WordPress, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.WordPress, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.WordPress, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.WordPress, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.WordPress, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.WordPress, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.WordPress, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Html, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Html, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Html, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Html, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Html, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Html, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Html, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Html, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Css, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Css, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Css, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Css, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Css, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Css, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Css, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Css, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Bootstrap, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Bootstrap, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Bootstrap, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Bootstrap, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Bootstrap, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Bootstrap, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Bootstrap, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Bootstrap, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Django, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Django, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Django, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Django, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Django, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Django, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Django, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Django, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Jquery, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Jquery, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Jquery, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Jquery, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Jquery, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Jquery, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Jquery, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Jquery, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Angular, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Angular, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Angular, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Angular, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Angular, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Angular, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Angular, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Angular, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Vue, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Vue, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Vue, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Vue, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Vue, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Vue, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Vue, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Vue, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.SqlServer, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.SqlServer, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.SqlServer, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.SqlServer, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.SqlServer, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.SqlServer, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.SqlServer, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.SqlServer, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.MySql, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="">
+            <div class="radio-inline">
+                @Html.RadioButtonFor(model => model.Knowledge.MySql, "0", new { htmlAttributes = new { @class = "" } })
+
+                <label class="" for="AccountType">0</label>
+            </div>
+            <div class="radio-inline">
+                @Html.RadioButtonFor(model => model.Knowledge.MySql, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+                <label class="custom-control-label" for="AccountType">1</label>
+            </div>
+            <div class="radio-inline">
+                @Html.RadioButtonFor(model => model.Knowledge.MySql, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+                <label class="custom-control-label" for="AccountType">2</label>
+            </div>
+            <div class="radio-inline">
+                @Html.RadioButtonFor(model => model.Knowledge.MySql, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+                <label class="custom-control-label" for="AccountType">3</label>
+            </div>
+            <div class="radio-inline">
+                @Html.RadioButtonFor(model => model.Knowledge.MySql, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+                <label class="custom-control-label" for="AccountType">4</label>
+            </div>
+            <div class="radio-inline">
+                @Html.RadioButtonFor(model => model.Knowledge.MySql, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+                <label class="custom-control-label" for="AccountType">5</label>
+            </div>
+            @Html.ValidationMessageFor(model => model.Knowledge.MySql, "", new { @class = "text-danger" })
+        </div>
+    </div>
+</div>
+
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Java, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Java, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label id="Java" class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Java, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label id="Java" class="" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Java, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label id="Java" class="" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Java, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label id="Java" class="" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Java, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label id="Java" class="" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Java, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label id="Java" class="" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Java, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Phyton, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Phyton, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Phyton, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Phyton, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Phyton, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Phyton, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Phyton, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Phyton, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Cake, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Cake, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Cake, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Cake, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Cake, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Cake, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Cake, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Cake, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Php, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Php, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Php, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Php, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Php, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Php, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Php, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Php, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.AspNetMvc, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.AspNetMvc, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.AspNetMvc, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.AspNetMvc, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.AspNetMvc, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.AspNetMvc, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.AspNetMvc, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.AspNetMvc, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Ruby, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ruby, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ruby, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ruby, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ruby, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ruby, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Ruby, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Ruby, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.C, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">5</label>
+
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.C, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.C_, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C_, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C_, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C_, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C_, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C_, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.C_, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.C_, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Photoshop, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Photoshop, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Photoshop, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Photoshop, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Photoshop, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Photoshop, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Photoshop, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Photoshop, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Illustraitor, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Illustraitor, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Illustraitor, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Illustraitor, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Illustraitor, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+
+            @Html.RadioButtonFor(model => model.Knowledge.Illustraitor, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Illustraitor, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Illustraitor, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Salesforce, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Salesforce, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Salesforce, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Salesforce, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Salesforce, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Salesforce, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Salesforce, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Salesforce, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    @Html.LabelFor(model => model.Knowledge.Seo, htmlAttributes: new { @class = "custom-control-label" })
+    <div class="">
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Seo, "0", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">0</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Seo, "1", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">1</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Seo, "2", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">2</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Seo, "3", new { htmlAttributes = new { @class = "custom-control-input" } })
+            <label class="custom-control-label" for="AccountType">3</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Seo, "4", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">4</label>
+        </div>
+        <div class="custom-control radio-inline">
+            @Html.RadioButtonFor(model => model.Knowledge.Seo, "5", new { htmlAttributes = new { @class = "custom-control-input" } })
+
+            <label class="custom-control-label" for="AccountType">5</label>
+        </div>
+        @Html.ValidationMessageFor(model => model.Knowledge.Seo, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group pad">
+    <h5>
+        Do you know any other language or framework that was not listed above? Tell us and evaluate yourself from 0 to 5. /
+        Conhece mais alguma linguagem ou framework que não foi listado aqui em cima? Conte para nos e se auto avalie ainda de 0 a 5.
+    </h5>
+
+    @Html.LabelFor(model => model.Knowledge.OtherLanguage, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.Knowledge.OtherLanguage, new { htmlAttributes = new { @class = "form-control", placeholder = "Other Language" } })
+        @Html.ValidationMessageFor(model => model.Knowledge.OtherLanguage, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="form-group pad">
+    <h5>
+        Enter the link here CRUD (create, update, delete)- read information in the welcome document quoted in the form description./
+        Insira aqui o link do CRUD (create, update, delete)- ler informações no documento de Boas Vindas citado na descrição do formulário.
+    </h5>
+    <h5>
+        Tutorials - Check out our tutorials and material explaining how the company works /
+        Confira nossos tutoriais e material explicando como a empresa funciona
+    </h5>
+    <h5><a href="https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM"> https://docs.google.com/document/d/145QuJ8-efr-pmNGV-2DOOGHD-1dc3MERSeL5g0XoqmM </a></h5>
+
+
+    @Html.LabelFor(model => model.Knowledge.Crud, htmlAttributes: new { @class = "col-form-label" })
+    <div class="">
+        @Html.EditorFor(model => model.Knowledge.Crud, new { htmlAttributes = new { @class = "form-control", placeholder = "Link CRUD" } })
+        @Html.ValidationMessageFor(model => model.Knowledge.Crud, "", new { @class = "text-danger" })
+    </div>
+</div>
+    
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/AngularJs")
+}
